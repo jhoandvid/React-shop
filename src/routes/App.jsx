@@ -13,9 +13,14 @@ import '../styles/global.css';
 const App=()=>{
     return(
         <BrowserRouter>
-            <Layout>
-                <Login/>    
-            </Layout>
+       <Switch>
+        <Layout>
+            <Route exact path="/home" component={Home}/>
+            <Route exact path="/login" component={Login}/>
+            <Route exact path="/recover-password" component={RecoveryPassword}/>
+            <Route component={NotFound}/>
+        </Layout>
+       </Switch>
         </BrowserRouter>
     
      
