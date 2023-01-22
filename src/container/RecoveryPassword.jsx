@@ -21,3 +21,5 @@ const RecoveryPassword=()=>{
     </div>
   </div>)
 }
+
+export default RecoveryPassword;
