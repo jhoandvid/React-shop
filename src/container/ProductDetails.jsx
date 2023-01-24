@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductInfo from '../components/ProductInfo';
-
+import '../styles/ProductDetail.scss';
 
 const ProductDetail=()=>{
     return (<aside className='ProductDetail'>
@@ -11,3 +11,5 @@ const ProductDetail=()=>{
             </aside>)
 }
 
+
+export default ProductDetail;

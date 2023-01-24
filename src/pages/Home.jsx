@@ -1,12 +1,13 @@
 import React from 'react';
-import Header from '../components/Header';
+import ProductList from '../container/productList';
+
 
 
 
 const Home=()=>{
     return(
         <>
-            
+            <ProductList/>
         </>
     )
 }
