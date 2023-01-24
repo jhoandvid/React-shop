@@ -2,13 +2,13 @@
 import React from "react";
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import Layout from "../container/Layout";
-import Login from "../container/Login";
+
 import Home from "../pages/Home";
 
-
-import RecoveryPassword from "../container/RecoveryPassword";
 import '../styles/global.css';
 import NotFound from "../pages/NotFount";
+import Login from "../pages/Login";
+import RecoveryPassword from "../pages/RecoveryPassword";
 
 
 

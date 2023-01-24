@@ -1,7 +1,7 @@
 import React from "react";
 import '../styles/Login.scss';
 
-const Login=({children})=>{
+const Login=()=>{
     return (
         <div className="login">
         <div className="form-container">
