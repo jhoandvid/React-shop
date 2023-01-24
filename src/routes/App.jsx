@@ -17,14 +17,14 @@ import NotFound from "../pages/NotFount";
 const App=()=>{
     return(
         <BrowserRouter>
-        <Switch>
-            <Layout>
-                <Route exact path="/home" component={Home}/>
+         <Layout>
+            <Switch>
+                <Route exact path="/" component={Home}/>
                 <Route exact path="/login" component={Login}/>
                 <Route exact path="/recover-password" component={RecoveryPassword}/>
-                <Route path="/not-found" component={NotFound}/>
-            </Layout>
-        </Switch>
+                <Route path="*" component={NotFound}/>
+            </Switch>
+        </Layout>
         </BrowserRouter>
     
      
