@@ -1,0 +1,59 @@
+@import 'vars'; 
+
+
+
+
+.notFound {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    font-weight: 600;
+    text-align: center;
+    padding: 30px;
+    color: green;
+    background-color: rgb(183, 241, 183);
+    border-radius: 50%;
+
+}
+
+.info{
+    position: absolute;
+    top: 57%;
+    margin-top: 10px;
+    text-align: center;
+    left: 50%;
+    font-size: 20px;
+    font-weight: 600;
+    color: green;
+    transform: translate(-50%, -50%);
+}
+
+.info p:nth-child(2){
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.info p:nth-child(1){
+    margin: 0;
+}
+
+.button{
+    position: absolute;
+    top: 80%;
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    left: 50%;
+    font-size: 20px;
+    font-weight: 600;
+    color: green;
+    border: none;
+    border-radius: 10%;
+    background: rgb(154, 240, 154);
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
