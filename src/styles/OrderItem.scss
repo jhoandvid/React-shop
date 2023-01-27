@@ -1,5 +1,9 @@
 @import 'vars';
 
+.OrderItem .close {
+	cursor: pointer;
+}
+
 .OrderItem {
 	display: grid;
 	grid-template-columns: auto 1fr auto auto;

@@ -16,12 +16,16 @@ import Checkout from "../pages/Checkout";
 import Orders from "../pages/Order";
 import SendEmail from "../pages/SendEmail";
 
+import AppContext from "../context/AppContext";
 
+import useInicialState from "../hooks/useInitialState";
 
 
 
 const App=()=>{
+    const initialState=useInicialState();
     return(
+        <AppContext.Provider value={initialState}> 
         <BrowserRouter>
          <Layout>
             <Switch>
@@ -39,6 +43,7 @@ const App=()=>{
             </Switch>
         </Layout>
         </BrowserRouter>
+        </AppContext.Provider>
     
      
     )
