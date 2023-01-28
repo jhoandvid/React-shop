@@ -19,15 +19,15 @@ const OrderItem = ({product}) => {
 	return (
 		
 		<div className="OrderItem">
-		
-			<figure>
-				<img src={product.images[0]} alt={product.title} />
-			</figure>
-			<p>{product.title}</p>
-			<p>${product.price}</p>
-			<img className='close' src={icon_close} onClick={()=>handleRemoveCart(product)} alt="close" />
-
+		<figure>
+			<img src={product.images[0]} alt={product.title} />
+		</figure>
+		<p>{product.title}</p>
+		<p>${product.price}</p>
+		<img className='close' src={icon_close} onClick={()=>handleRemoveCart(product)} alt="close" />
 		</div>
+
+		
 	);
 }
 

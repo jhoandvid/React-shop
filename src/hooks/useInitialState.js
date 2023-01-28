@@ -12,6 +12,10 @@ const useInicialState=()=>{
     const [toggle, setToggle]=useState(false);
     const [toggleOrders, setToggleOrders]=useState(false);
 
+    const [addCartImg, setAddCartImg]=useState(false);
+
+    const [menuMobile, setMenuMobile]=useState(false);
+
     const handleToggle=()=>{
         setToggle(!toggle);
         setToggleOrders(false)
@@ -22,6 +26,7 @@ const useInicialState=()=>{
         setToggle(false)
     }
 
+    
 
     const addToCart=(payload)=>{
         setToggleOrders(false)
@@ -33,14 +38,24 @@ const useInicialState=()=>{
         })
     }
 
+    const handleToggleMenuMobile=()=>{
+        setToggleOrders(false)
+        setToggle(false)
+        setMenuMobile(!menuMobile);
+    }
+
+
+
+
 
 
 
 
     const removeFromCart=(payload)=>{
+       
         setState({
             ...state,
-            cart:state.cart.filter(items=>items.uuid!==payload.uuid)
+            cart:state.cart.filter(items=>items.id!==payload.id)
         })  
 
        
@@ -49,13 +64,21 @@ const useInicialState=()=>{
     return {
         state,
         addToCart,
+        addCartImg,
         removeFromCart,
+        setAddCartImg,
         togleHeader:{
             handleToggle,
             handleToggleMyOrder,
             toggle,
-            toggleOrders
-        }
+            toggleOrders,
+
+
+            menuMobile,
+            handleToggleMenuMobile,
+          
+        },
+      
         
     }
 }

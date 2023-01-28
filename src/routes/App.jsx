@@ -28,7 +28,7 @@ const App=()=>{
         <AppContext.Provider value={initialState}> 
         <BrowserRouter>
          <Layout>
-            <Switch>
+            <Switch >
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/login" component={Login}/>
                 <Route exact path="/recover-password" component={RecoveryPassword}/>
@@ -39,7 +39,7 @@ const App=()=>{
 					<Route exact path="/checkout" component={Checkout} />
 					<Route exact path="/orders" component={Orders} />
                 <Route path="*" component={NotFound}/>
-                <Route ></Route>
+                
             </Switch>
         </Layout>
         </BrowserRouter>

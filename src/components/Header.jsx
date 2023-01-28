@@ -8,22 +8,23 @@ import shoppingCart from '@icons/icon_shopping_cart.svg';
 import AppContext from '../context/AppContext'
 import Menu from './Menu';
 import MyOrder from '../container/MyOrder';
+import  MenuMobile  from '../pages/MenuMobile';
 
 const Header = () => {
 
-    const {state,togleHeader:{handleToggle, toggle,
-        toggleOrders,handleToggleMyOrder}  }= useContext(AppContext);
+    const {state,togleHeader:{handleToggle, toggle, menuMobile,
+        toggleOrders,handleToggleMyOrder, handleToggleMenuMobile}  }= useContext(AppContext);
 
-
-  
-
-
-   
     
+
     
+
+    
+        
 
     return (<nav>
-        <img src={menu} alt="menu" className="menu" />
+        <img src={menu} alt="menu" className="menu" onClick={handleToggleMenuMobile}  />
+       
 
         <div className="navbar-left">
             <img src={logo} alt="logo" className="nav-logo" />
@@ -59,9 +60,10 @@ const Header = () => {
                 </li>
             </ul>
         </div>
-
+    
         {toggle && <Menu/>}
         {toggleOrders && <MyOrder/>}
+        {menuMobile && <MenuMobile/>}
         
     </nav>)
 

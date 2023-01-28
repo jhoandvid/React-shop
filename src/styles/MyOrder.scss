@@ -1,18 +1,29 @@
 @import 'vars';
 
+.flechita{
+	cursor: pointer;
+}
 
+
+.my-order-content{
+	overflow-y: scroll;
+	max-height: 60%;
+	scroll-behavior: smooth;
+  }
 
 .MyOrder {
 	width: 360px;
 	padding: 24px;
 	box-sizing: border-box;
 	position: absolute;
+	height: 100vh;
 	right: 0;
 	background-color: white;
 	top: 60px;
 	bottom: 0;
 	border-radius: 6px;
 	border: 1px solid var(--very-light-pink);
+
 }
 .title-container {
 	display: flex;
@@ -48,6 +59,7 @@
 	font-weight: bold;
 }
 
+
 .primary-button {
 	background-color: var(--hospital-green);
 	border-radius: 8px;
@@ -64,3 +76,4 @@
 		width: 100%;
 	}
 }
+

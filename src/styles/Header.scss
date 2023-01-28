@@ -2,6 +2,11 @@
 nav {
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    width: 97%;
+    margin-bottom: 30px;
+    background: white;
     padding: 0 24px;
     border-bottom: 1px solid var(--very-light-pink);
   }
@@ -80,6 +85,10 @@ nav {
       display: none;
     }
 
+    nav{
+      width: 90%;
+    }
+   
     
 
   }

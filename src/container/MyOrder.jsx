@@ -2,11 +2,12 @@ import React, { useContext } from 'react';
 import OrderItem from '../components/OrderItem';
 import '../styles/MyOrder.scss';
 
-import flechita from '@icons/flechita.svg'
+import flechita from '@icons/flechita.svg';
+
 import AppContext from '../context/AppContext';
 
 const MyOrder = () => {
-	const {state:{cart}}=useContext(AppContext);
+	const {state:{cart}, togleHeader:{handleToggleMyOrder}}=useContext(AppContext);
 
 
 	const sumTotal=()=>{
@@ -28,15 +29,22 @@ const MyOrder = () => {
 	return (
 		<aside className="MyOrder">
 			<div className="title-container">
-				<img src={flechita} alt="arrow" />
+				<img className='flechita' src={flechita} alt="arrow" onClick={handleToggleMyOrder} />
 				<p className="title">My order</p>
 			</div>
 			<div className="my-order-content">
-
+				
+				
 				{cart.map((product, index)=>( <OrderItem key={`orderItem-${index}`} product={product}/>))}
-			
 
-				<div className="order">
+				
+			
+			
+				
+			</div>
+
+			
+			<div className="order">
 					<p>
 						<span>Total</span>
 					</p>
@@ -45,7 +53,9 @@ const MyOrder = () => {
 				<button className="primary-button">
 					Checkout
 				</button>
-			</div>
+			
+			
+			
 		</aside>
 	);
 }
